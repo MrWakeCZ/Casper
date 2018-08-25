@@ -1,0 +1,182 @@
+/* OVERWRITING GLOBAL.CSS */
+
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+    /* Colours */
+    --lightblue: #1F1F1F;
+    --blue: #3eb0ef; /* Use same as in global.css */
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+a:focus {
+    text-decoration: underline;
+}
+
+/* OVERWRITING SCREEN.CSS */
+
+/* 3. Special Template Styles
+/* ---------------------------------------------------------- */
+
+@media (min-width: 90px) {
+    .author-template .post-feed,
+    .home-template .post-feed,
+    .tag-template .post-feed {
+        margin-top: 0;
+        padding-top: 40px;
+    }
+    .home-template .site-nav {
+        position: relative;
+        top: -20px;
+        z-index: 300;
+    }
+}
+
+
+/* 4. Site Header
+/* ---------------------------------------------------------- */
+
+@media (max-width: 1040px) {
+    .outer {
+        padding: 0 1vw;
+    }
+    .home-template .outer {
+        padding: 0 4vw;
+    }
+}
+
+.site-header {
+    background: var(--lightblue);
+    /*padding-bottom: 0;
+    padding-top: 0; */
+}
+
+.site-header:before,
+.site-header:after {
+    background: none;
+}
+
+.site-title {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.site-logo {
+    max-height: 300px;
+    margin-bottom: 24px;
+}
+
+.site-description {
+    margin: 0 0 1em 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+@media (max-width: 320px) {
+    .site-title {
+        font-size: 2.5rem;
+    }
+    .site-description {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* 5. Site Navigation
+/* ---------------------------------------------------------- */
+
+
+
+
+/* 6. Post Feed
+/* ---------------------------------------------------------- */
+
+.post-card:focus {
+    box-shadow: 0 0 1px rgba(39,44,49,0.10), 0 3px 16px rgba(39, 44, 49,0.07);
+    transition: all 0.3s ease;
+    transform: translate3D(0, -1px, 0);
+}
+
+.post-card-content-link:focus {
+    text-decoration: none;
+}
+
+
+
+/* 7.2. Post Footer
+/* ---------------------------------------------------------- */
+
+.author-card-name a:focus {
+    text-decoration: none;
+}
+
+.author-card-button:focus {
+    border-color: var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+}
+
+
+/* 7.4. Related posts
+/* ---------------------------------------------------------- */
+
+.read-next-card {
+    background: var(--lightblue) center center;
+}
+
+.read-next-card:before {
+    background: none;
+}
+
+.read-next-card-header-title a:focus {
+    text-decoration: none;
+}
+
+.read-next-card-content li a:focus {
+    opacity: 1;
+}
+
+/* 7.5. Floating Header
+/* ---------------------------------------------------------- */
+
+.floating-header-logo a:focus {
+    text-decoration: none;
+}
+
+
+/* 10. Subscribe Overlay
+/* ---------------------------------------------------------- */
+
+.subscribe-overlay-close:hover {
+    cursor: pointer;
+}
+
+
+/* 11. Site Footer
+/* ---------------------------------------------------------- */
+
+.site-footer {
+    background: var(--lightblue);
+}
+
+.site-footer-content,
+.site-footer-content a {
+    color: white;
+}
+
+.site-footer-content a:hover,
+.site-footer-content a:focus {
+    color: rgba(255,255,255,1);
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .site-footer-nav {
+        display: block;
+        text-align: center;
+    }
+}
